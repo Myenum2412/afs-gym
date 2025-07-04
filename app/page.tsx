@@ -160,16 +160,18 @@ export default function HomePage() {
     <div className="min-h-screen overflow-hidden">
       {/* Enhanced Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
 
-        {/* Background Image */}
-        <div className="absolute inset-0 ">
+        {/* Background Image - Fixed */}
+        <div className="absolute inset-0">
           <Image
-            src="/public/home.jpeg?height=1080&width=1920"
+            src="/home.jpeg"
             alt="Premium gym with modern equipment and energetic atmosphere"
             fill
             className="object-cover opacity-60"
             priority
+            quality={90}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
           />
         </div>
 
